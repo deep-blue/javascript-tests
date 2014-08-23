@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script data-main="../scripts/requirejs_config" src="../lib/require.js"></script>
+</head>
+<body>
+<h1>Franks require.js Testseiten</h1>
+
+<script>
+//console.log("i="+i);
+console.log('Starte Testskripte');
+require(["test"],function(test) {
+console.log(test.say_hello());
+})
+require(["test"],function(bla) {
+console.log(bla.say_hello());
+})
+require(["jquery"],function(jq) {
+jq("h1")
+})
+//console.log("i="+i);
+
+</script>
+
+</body>
+</html>
