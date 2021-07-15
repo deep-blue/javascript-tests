@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="../lib/require.js"></script>
+</head>
+<body>
+<h1>Franks require.js Testseiten</h1>
+
+<script>
+requirejs.config(
+	{
+    "baseUrl": "../scripts",
+    "paths": {
+      jquery:  "../lib/jquery-2.1.1"  
+      }
+});
+
+
+require(['jquery'],function (jq) {
+var firecnt=1;
+var fire = function(event, data) {
+	console.log('es brennt! '+firecnt++);
+    };
+
+
+jq(document).on('fire',fire);
+jq(document).on('fire',fire);
+jq(document).trigger('fire');
+});
+</script>
+
+</body>
+</html>
